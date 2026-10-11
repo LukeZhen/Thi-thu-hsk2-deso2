@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HSK 2 Mock Test</title>
+  <meta name="description" content="Thi thử HSK（二级）H20902 trực tuyến — 35 câu nghe, 25 câu đọc, tính giờ và chấm điểm tự động.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar" id="topbar" hidden>
+    <div class="tb-left">
+      <span class="tb-brand">HSK 2</span>
+      <span class="tb-phase" id="tbPhase"></span>
+    </div>
+    <div class="tb-progress" id="tbProgressWrap" hidden>
+      <div class="bar"><span id="tbProgress"></span></div>
+      <small id="tbProgressText">0/60</small>
+    </div>
+    <div class="tb-timer" id="tbTimer" hidden>
+      <span class="lbl" id="tbTimerLbl">Còn lại</span>
+      <span class="clock" id="tbClock">00:00</span>
+    </div>
+  </header>
+
+  <div id="toast" class="toast" role="status" aria-live="assertive" hidden></div>
+
+  <main id="app" class="app"></main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h3 id="modalTitle"></h3>
+      <div id="modalBody"></div>
+      <div class="modal-actions">
+        <button class="btn ghost" id="modalCancel">Huỷ</button>
+        <button class="btn primary" id="modalOk">Đồng ý</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="listenAudio" preload="auto"></audio>
+
+  <script src="js/config.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/key.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
